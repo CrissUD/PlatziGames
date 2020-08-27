@@ -1,0 +1,132 @@
+.titles {
+  font-family: 'oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'lato', sans-serif;
+  font-size: 16px;
+  background: #333;
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: 'oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.intro {
+  margin: auto;
+  max-width: 1340px;
+  height: 650px;
+  padding: 0.7rem;
+  position: relative;
+  background: #8841da;
+  box-shadow: 0px 5px 15px 0px rgba(136, 65, 218, 0.8);
+}
+.intro__imagen {
+  max-width: 1320px;
+  position: absolute;
+}
+.intro__imagen img {
+  width: 100%;
+  height: 624px;
+  object-fit: cover;
+}
+.intro__contenido {
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 156px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+}
+.intro__categoria {
+  font-family: 'oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.4);
+}
+.intro__titulo {
+  font-size: 50px;
+  line-height: 60px;
+}
+.intro__autor {
+  width: 150px;
+  margin: 0 auto;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+.intro__autor img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  padding-right: 10px;
+  float: left;
+}
+.intro__autor span {
+  display: inline-block;
+}
+.intro__autor-titulo {
+  color: rgba(255, 255, 255, 0.4);
+}
+.articulo--principal {
+  max-width: 660px;
+  margin: 0 auto;
+}
+.articulo--principal__intro {
+  font-size: 26px;
+  line-height: 36px;
+}
+.articulo--principal h2 {
+  margin: 40px 0;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+}
+.articulo--principal h3 {
+  color: #8841da;
+}
+.contenedor--cajas {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.caja {
+  max-width: 430px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px 0px rgba(136, 65, 218, 0.8);
+}
+.caja__contenido {
+  padding: 25px;
+  background: #8841da;
+  min-height: 254px;
+}
+.caja span {
+  color: #fff;
+  font-family: 'oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.caja a {
+  text-decoration: none;
+  font-family: 'oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
