@@ -1,0 +1,81 @@
+mixin stats(valor,leyenda)
+	.estadistica_elemento
+		h3=valor
+		span=leyenda
+mixin article(categoria,titulo, descripcion)
+	.articulo
+		span.articulo__categoria=categoria
+		h2.articulo__titulo=titulo
+		p.articulo__descripcion=descripcion
+mixin caja(imagen, categoria, titulo, contenido)
+	.caja
+		.caja__imagen: img(src="../../resources/images/"+imagen)
+		.caja__contenido
+			span.caja__categoria=categoria
+			h3=titulo
+			p=contenido
+			a Leer Mas		
+mixin caja--estadistica(haveImage, imagen, category, title, summary)
+	.caja
+		if haveImage
+			a(href="#",class="caja__imagen"): img(src="../../resources/images/"+imagen)
+		.caja__contenido
+			span.caja__categoria=category
+			h3=title
+			p=summary
+		+estadistica
+
+mixin estadistica
+	.estadistica--articulos: ul
+		li
+			i.fas.fa-share
+			span 275
+		li
+			i.fas.fa-eye
+			span 275
+		li
+			i.fas.fa-comment-alt
+			span 12
+
+mixin estadistica--caja-con-fondo
+	.caja--con-fondo__stats: ul
+		li
+			i.fas.fa-share
+			span 275
+		li
+			i.fas.fa-eye
+			span 275
+		li
+			i.fas.fa-comment-alt
+			span 12
+
+mixin caja--con-fondo-grande (imagen, categoria, titulo, contenido)
+	a(class="caja--con-fondo caja--grande")
+		.caja__imagen: img(src="../../resources/images/"+imagen)
+		.caja--con-fondo__contenido
+			span.caja--con-fondo__categoria=categoria
+			h2=titulo
+			p=contenido
+		+estadistica--caja-con-fondo
+
+mixin caja--con-fondo-mediana (clase, imagen, categoria, titulo, contenido)
+	a(class="caja--con-fondo caja--mediana " + clase)
+		.caja__imagen: img(src="../../resources/images/"+imagen)
+		.caja--con-fondo__contenido
+			span.caja--con-fondo__categoria=categoria
+			h2=titulo
+		+estadistica--caja-con-fondo
+
+mixin caja--con-fondo-pequena (clase, imagen, categoria, titulo, contenido)
+	a(class="caja--con-fondo caja--pequena " + clase)
+		.caja__imagen: img(src="../../resources/images/"+imagen)
+		.caja--con-fondo__contenido
+			span.caja--con-fondo__categoria=categoria
+			h2=titulo
+		+estadistica--caja-con-fondo
+
+mixin listado-categoria(numero,titulo)
+	li: a(href="#")
+		span.sidebar--listado__numero=numero
+		span.sidebar--listado__titulo=titulo
+		

@@ -1,0 +1,20 @@
+extend ../components/template.pug
+block contents
+	main.contenedor--home
+		+caja--con-fondo-grande ('cyberpunk-2077.jpg', "Destacadas", 'Cyberpunk 2077 tiene tres prólogos distintos', 'En Cyberpunk 2077 los jugadores podrán seleccionar entre tres historias de origen diferentes, cada una presentando una ubicación de partida distinta para su personaje.')
+		+caja--con-fondo-pequena ('caja-rdr2','rdr2.jpg', "PS4", 'Red Dead Redemption 2 llegará a PC')
+		.banner--homepage
+			h3 Apex Legends Temporada 2: un nuevo trailer muestra cambios al mapa.
+			p Dos nuevos trailers de Apex Legends muestran lo que nos espera en la Temporada 2 del battle royale de Respawn.
+			a.button Leer mas
+		+caja--con-fondo-pequena ('caja-ff','ff.jpg', "PS4", 'Final Fantasy XIV recibirá una serie live-action en televisión')
+		+caja--con-fondo-pequena ('caja-xbox','xbox.jpg', "XBOX", 'Conoce las actualizaciones de XBOX Game Pass')
+		+caja--con-fondo-pequena ('caja-fortnite','fortnite.jpg', "FORTNITE", 'Fortnite une fuerzas con Stranger Things')
+		+caja--con-fondo-mediana ('caja-zelda','zelda.jpg', "Switch", 'Secuela de The Legend of Zelda: Breath of the Wild anunciada en el E3 2019')
+		.sidebar--listado
+			h3 Noticias Destacadas
+			ul
+				+listado-categoria('1','GTA VI: Filtraciones que son bastante dudosas')
+				+listado-categoria('2','Secuela de The Legend of Zelda: Breath of the Wild anunciada en el E3 2019')
+				+listado-categoria('3','Red Dead Online recibe actualización masiva y sale de Beta')
+

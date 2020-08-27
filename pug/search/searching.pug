@@ -1,0 +1,16 @@
+extend ../components/template.pug
+block contents
+	.buscador: form: input(type="text" placeholder="Playstation" class="buscador__input")
+	header.encabezado--con-filtros
+		h2 20 Resultados para "PlayStation"
+		.filtros
+			span Filtrar Por
+			a(href="#" class="fa fa-th-large")
+			a(href="#" class="fa fa-bars")
+	section.contenido
+		+caja--estadistica(true, "apex.jpg", "Video", "Apex Legends Temporada 2: un nuevo trailer muestra cambios al mapa", "Dos nuevos trailers de Apex Legends muestran lo que nos espera en la Temporada 2 del battle royale de Respawn.")
+		+caja--estadistica(true, "crash.jpg", "Video", "Ya salio la reseña de Crash Team Racing Nitro Fueled", "Veinte años después del lanzamiento del original, Crash Team Racing ha recibido un remake total que logra mantener todos los aspectos originales.")
+		+caja--estadistica(true, "ff.jpg", "Video", "Final Fantasy XIV recibirá una serie live-action en televisión ", "Final Fantasy XIV Online recibirá una adaptación aTV de parte de Square Enix con Sony Pictures Television y Hivemind.")
+		+caja--estadistica(false, "", "noticias", "pes 2020 obtiene acuerdo con el manchester united", "Konami ha anunciado que han firmado un acuerdo con el club de futbol inglés Manchester United para ser incluido en el juego.")
+		+caja--estadistica(false, "", "noticias", "cyberpunk: habrá dos juegos más", "El estudio polaco de videojuegos CD Projekt está trabajando no en uno, sino en tres juegos ubicados en el universo RPG de Cyberpunk.")
+		+caja--estadistica(false, "", "noticias", "Mortal Kombat 11: Filtración confirma al Joker como DLC", "Usuarios han investigado el más reciente parche de la versión para PC de Mortal Kombat 11 donde se incluyen datos del Joker, Terminator.")
