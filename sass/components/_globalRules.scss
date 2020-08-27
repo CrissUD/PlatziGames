@@ -1,0 +1,68 @@
+$font1: 'lato', sans-serif;
+$font2: 'oswald', sans-serif;
+$color-claro: #fff;
+$color-primario: #333;
+$color-secundario: #8841da;
+$color-terciario: #012179;
+
+// Mixin
+@mixin box {
+    border-radius: 20px;
+    box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, .5);
+    color: $color-primario;
+    background: $color-claro;
+}
+
+@mixin titles ($font){
+    @if $font == $font1 {
+        font-family: $font1;
+    } @else {
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+}
+
+@mixin shadow(){
+    box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, .6);
+}
+
+@function calculateRem($size){
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;	
+}
+
+// Functions
+@function get-opacity ($color, $level) {
+    @return rgba($color, $level);
+}
+
+// loops
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+    #{$header} {
+        font-size: $size;
+        margin: 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    @include titles ($font1);
+    @include font-size(18px);
+}
+
+main{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+}

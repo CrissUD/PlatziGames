@@ -1,0 +1,26 @@
+.estadistica--perfil {
+    display: flex;
+    width: 50%;
+    height: 90px;
+    padding: 10px 25px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+    @include box;
+
+    .estadistica_elemento:hover {
+        cursor: pointer;
+        text-shadow: 0px 0px 8px $color-terciario;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        @include titles ($font2);
+    }
+    span {
+        font-size: 12px;
+        text-align: center;
+        @include titles ($font2);
+    }
+}
