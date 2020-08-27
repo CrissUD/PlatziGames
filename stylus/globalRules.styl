@@ -1,0 +1,45 @@
+font1 = 'lato', sans-serif
+font2 = 'oswald', sans-serif
+color-claro = #fff
+color-principal = #333
+color-secundario = #8841da 
+color-terciario = #012179
+
+//Mixin
+container()
+    display flex
+    width: 90%
+    margin: 0 auto
+    padding: 30px 0
+
+shadow()
+    box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, .6);
+
+// functions
+opacity(color, cant)
+    alpha(color, cant)
+
+titles(font)
+    if font == font1
+        font-family: font1
+    else 
+        font-family: font2
+        font-weight: 600
+        text-transform: uppercase
+
+
+// loop
+for header in 3 2 1
+    h{header}
+        font-size: 35px - (5 * header)
+        margin 0
+
+
+*
+    box-sizing border-box
+
+body
+    margin 0
+    titles(font1)
+    background: color-principal
+    color: color-claro
