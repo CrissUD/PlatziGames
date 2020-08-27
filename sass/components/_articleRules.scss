@@ -1,0 +1,27 @@
+.articulos { 
+    background: $color-primario;
+    width: 50%;
+    padding: 80px 40px;
+}
+
+.articulo {
+    margin-bottom: 75px;
+    border-bottom: 3px solid $color-secundario;
+
+    &__categoria {
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-secundario;
+        @include titles ($font2);
+    }
+    &__titulo {
+        color: $color-claro;
+        font-size: 24px;
+        @include titles ($font2);
+    }
+    &__descripcion { 
+        margin-bottom: 30px;
+        padding-right: 100px;
+        color: get-opacity($color-claro, .7);
+    }
+}

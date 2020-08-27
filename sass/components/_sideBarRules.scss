@@ -1,0 +1,35 @@
+.sidebar--listado {
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  @include shadow();
+
+  h3 {
+    @include font-size(20px);
+    @include titles($font2);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 17px auto;
+    padding: 17px 0;
+    border-top: 1px solid get-opacity($color-claro, .4);
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    padding: 17px 20px;
+    text-decoration: none;
+    color: $color-claro;
+  }
+
+  &__numero {
+    color: get-opacity($color-claro, .2);
+    margin-right: 15px;
+  }
+}

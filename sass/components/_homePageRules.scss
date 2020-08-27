@@ -1,0 +1,132 @@
+.contenedor--home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include media(desktop-s) {
+        height: 1200px;
+        width: 1300px;
+        margin: 30px auto;
+        @include display-grid;
+        @include grid-template-columns(1fr grid-repeat(3));
+        @include grid-template-rows(1fr grid-repeat(3));
+        gap: 20px;
+    }
+}
+
+.caja--grande {
+    @include grid-row(1, 3);
+    @include grid-column(1, 4);
+}
+
+.caja-rdr2 {
+    @include grid-row(1, 2);
+    @include grid-column(4, 5);
+}
+
+.banner--homepage {
+    @include grid-row(2, 4);
+    @include grid-column(4, 5);
+}
+
+.sidebar--listado {
+    @include grid-row(3, 5);
+    @include grid-column(1, 2);
+}
+
+.caja-zelda {
+    @include grid-row(3, 4);
+    @include grid-column(2, 4);
+}
+
+.caja-ff {
+    @include grid-row(4, 5);
+    @include grid-column(2, 3);
+}
+
+.caja-fortnite {
+    @include grid-row(4, 5);
+    @include grid-column(3, 4);
+}
+
+.caja-xbox {
+    @include grid-row(4, 5);
+    @include grid-column(4, 5);
+}
+
+.caja--con-fondo {
+    display: block;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    background: $color-primario;
+
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: auto;
+        position: absolute;
+        opacity: .5;
+        object-fit: contain;
+    }
+    &__contenido {
+        padding: 20px;
+        position: absolute;
+        text-align: center;
+        color: $color-claro;
+        p {
+            color: $color-claro;
+        }
+        h3 {
+            color: $color-claro;
+        }
+    }
+    &__categoria {
+        display: block;
+        width: auto;
+        max-width: 100px;
+        margin: auto;
+        text-align: center;
+        background: $color-secundario;
+        color: $color-claro;
+        @include titles($font2);
+    }
+    &__stats {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        
+        ul {
+        display: flex;
+        list-style: none;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+    }
+}
+
+.caja--grande {
+    max-width: 1000px;
+    height: 550px;
+    h2 {
+        @include titles($font2);
+        @include font-size(50px);
+    }
+    .caja--con-fondo__contenido {
+        padding-top: 200px;
+    }
+}
+
+.caja--mediana {
+    max-width: 600px;
+    height: 250px;
+}
+
+.caja--pequeña {
+    max-width: 300px;
+    height: 250px;
+}
