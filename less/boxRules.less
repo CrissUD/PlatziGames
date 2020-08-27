@@ -1,0 +1,28 @@
+.contenedor--cajas {
+    display: flex;
+    justify-content: space-evenly ;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.caja {
+    max-width: 430px;
+    border-radius: 20px;
+    overflow: hidden;
+    .shadow (@color-secundario);
+
+    &__contenido {
+        padding: 25px;
+        background: @color-secundario;
+        min-height: 254px;
+    }
+    span {
+        color: @color-claro;
+        .titles;
+    }
+    a {
+        text-decoration: none;
+        .titles;
+        color: @color-claro;
+    }
+}

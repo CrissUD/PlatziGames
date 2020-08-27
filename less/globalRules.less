@@ -1,0 +1,42 @@
+@color-claro: #fff;
+@color-primario: #333;
+@color-secundario: #8841da;
+@color-terciario: #012179;
+@font1: 'lato', sans-serif;
+@font2: 'oswald', sans-serif;
+@font-base: 18px;
+
+// Mixins
+.shadow (@color) {
+    box-shadow: 0px 5px 15px 0px fade(@color, 80%);
+}
+
+.titles {
+    font-family: @font2;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dynamic-font (@font-size) {
+    font-size: @font-size;
+    line-height: @font-size + 10%;
+}
+// Rules
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: @font1;
+    font-size: 16px;
+    background: @color-primario;
+    color: @color-claro;
+    .dynamic-font (@font-base);
+}
+
+h1, h2, h3 {
+    margin: 0;
+    .titles;
+}
