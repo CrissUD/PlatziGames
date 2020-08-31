@@ -1,84 +1,77 @@
 .contenedor--home {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include display-grid;
+    max-width: 1300px;
+    height: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    @include grid-template-columns(1fr grid-repeat(3));
+    @include grid-template-rows(1fr grid-repeat(3));
 
-    @include media(desktop-s) {
-        height: 1200px;
-        width: 1300px;
-        margin: 30px auto;
-        @include display-grid;
-        @include grid-template-columns(1fr grid-repeat(3));
-        @include grid-template-rows(1fr grid-repeat(3));
-        gap: 20px;
+    @media (max-width: 1200px) {
+        width: 85%;
+        height: 100%;
+        @include grid-template-columns(1fr grid-repeat(2));
+        @include grid-template-rows(380px repeat(3, 300px));
     }
-}
 
-.caja--grande {
-    @include grid-row(1, 3);
-    @include grid-column(1, 4);
-}
+    @media (max-width: 770px) {
+        width: 85%;
+        height: 100%;
+        @include grid-template-columns(1fr grid-repeat(1));
+        @include grid-template-rows(380px repeat(4, 280px));
+    }
 
-.caja-rdr2 {
-    @include grid-row(1, 2);
-    @include grid-column(4, 5);
-}
-
-.banner--homepage {
-    @include grid-row(2, 4);
-    @include grid-column(4, 5);
-}
-
-.sidebar--listado {
-    @include grid-row(3, 5);
-    @include grid-column(1, 2);
-}
-
-.caja-zelda {
-    @include grid-row(3, 4);
-    @include grid-column(2, 4);
-}
-
-.caja-ff {
-    @include grid-row(4, 5);
-    @include grid-column(2, 3);
-}
-
-.caja-fortnite {
-    @include grid-row(4, 5);
-    @include grid-column(3, 4);
-}
-
-.caja-xbox {
-    @include grid-row(4, 5);
-    @include grid-column(4, 5);
+    @media (max-width: 480px) {
+        width: 85%;
+        height: 100%;
+        @include grid-template-columns(1fr);
+        @include grid-template-rows(420px 280px 580px);
+    }
 }
 
 .caja--con-fondo {
     display: block;
-    box-shadow: none;
     position: relative;
     overflow: hidden;
-    background: $color-primario;
+
+    @media (max-width: 480px) {
+        height: 280px;
+    }
 
     img {
         display: block;
-        max-width: 100%;
-        max-height: auto;
+        width: 100%;
         position: absolute;
         opacity: .5;
-        object-fit: contain;
+        object-fit: cover;
+        height: 100%;
     }
     &__contenido {
-        padding: 20px;
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
         text-align: center;
-        color: $color-claro;
+        span {
+            margin: 10px auto;
+            padding: 5px;
+        }
         p {
             color: $color-claro;
+            padding: 5px 20px;
+            @media (max-width: 1080px) {
+                display: none;
+            }
         }
-        h3 {
-            color: $color-claro;
+        h2 {
+            color: get-opacity($color-claro, .7);
+            @media (max-width: 1080px) {
+                @include font-size(20px);
+            }
         }
     }
     &__categoria {
@@ -97,6 +90,7 @@
         width: 100%;
         position: absolute;
         bottom: 0;
+        color: get-opacity($color-claro, .7);
         
         ul {
         display: flex;
@@ -111,22 +105,158 @@
 
 .caja--grande {
     max-width: 1000px;
-    height: 550px;
+    max-height: 550px;
+    @media (max-width: 480px) {
+        height: 420px;
+    }
     h2 {
         @include titles($font2);
         @include font-size(50px);
-    }
-    .caja--con-fondo__contenido {
-        padding-top: 200px;
+        @media (max-width: 1080px) {
+            @include font-size(25px);
+        }
+        @media (max-width: 770px) {
+            @include font-size(20px);
+        }
     }
 }
 
 .caja--mediana {
     max-width: 600px;
-    height: 250px;
+    height: 100%;
 }
 
 .caja--pequeña {
     max-width: 300px;
     height: 250px;
+}
+
+
+
+@include media(desktop-s) {
+    .caja--grande {
+        @include grid-row(1, 3);
+        @include grid-column(1, 4);
+    }
+    
+    .caja-rdr2 {
+        @include grid-row(1, 2);
+        @include grid-column(4, 5);
+    }
+    
+    .banner--homepage {
+        @include grid-row(2, 4);
+        @include grid-column(4, 5);
+    }
+    
+    .sidebar--listado {
+        @include grid-row(3, 5);
+        @include grid-column(1, 2);
+    }
+    
+    .caja-zelda {
+        @include grid-row(3, 4);
+        @include grid-column(2, 4);
+    }
+    
+    .caja-ff {
+        @include grid-row(4, 5);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-fortnite {
+        @include grid-row(4, 5);
+        @include grid-column(3, 4);
+    }
+    
+    .caja-xbox {
+        @include grid-row(4, 5);
+        @include grid-column(4, 5);
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1200px) {
+    
+    .caja--grande {
+        @include grid-row(1, 2);
+        @include grid-column(1, 3);
+    }
+    
+    .caja-rdr2 {
+        @include grid-row(2, 3);
+        @include grid-column(1, 2);
+    }
+
+    .banner--homepage {
+        @include grid-row(1, 3);
+        @include grid-column(3, 4);
+    }
+    
+    .sidebar--listado {
+        @include grid-row(3, 5);
+        @include grid-column(1, 2);
+    }
+    
+    .caja-zelda {
+        @include grid-row(3, 4);
+        @include grid-column(2, 4);
+    }
+    
+    .caja-ff {
+        @include grid-row(2, 3);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-fortnite {
+        @include grid-row(4, 5);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-xbox {
+        @include grid-row(4, 5);
+        @include grid-column(3, 4);
+    }
+}
+
+@media (min-width: 480px) and (max-width: 770px) {
+    
+    .caja--grande {
+        @include grid-row(1, 2);
+        @include grid-column(1, 2);
+    }
+    
+    .caja-rdr2 {
+        @include grid-row(1, 2);
+        @include grid-column(2, 3);
+    }
+
+    .banner--homepage {
+        @include grid-row(2, 4);
+        @include grid-column(1, 2);
+    }
+    
+    .sidebar--listado {
+        @include grid-row(4, 6);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-zelda {
+        @include grid-row(4, 5);
+        @include grid-column(1, 2);
+    }
+    
+    .caja-ff {
+        @include grid-row(2, 3);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-fortnite {
+        @include grid-row(3, 4);
+        @include grid-column(2, 3);
+    }
+    
+    .caja-xbox {
+        @include grid-row(5, 6);
+        @include grid-column(1, 2);
+    }
 }

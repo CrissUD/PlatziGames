@@ -5,9 +5,25 @@
   background-color: $color-secundario;
   color: $color-claro;
 
+  @media (min-width: 770px) and (max-width: 950px) {
+    padding: 25px;
+  }
+
+  @media (min-width: 480px) and (max-width: 600px) {
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    justify-self: center;
+  }
+
   h3 {
     @include font-size(20px);
     @include titles($font2);
+  }
+
+  p {
+    margin: 30px auto 50px auto;
   }
 
   .button {

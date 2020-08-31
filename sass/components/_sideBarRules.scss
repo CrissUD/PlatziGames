@@ -1,8 +1,12 @@
 .sidebar--listado {
   max-width: 300px;
-  padding: 20px;
+  padding: 40px 20px;
   border-radius: 20px;
   @include shadow();
+
+  @media (max-width: 480px) {
+    justify-self: center;
+  }
 
   h3 {
     @include font-size(20px);
@@ -21,11 +25,31 @@
     list-style: none;
   }
 
+  @media (min-width: 770px) and (max-width: 950px) {
+    li:last-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 700px) {
+    li:last-child {
+      display: none;
+    }
+  }
+
   a {
     display: flex;
     padding: 17px 20px;
     text-decoration: none;
     color: $color-claro;
+
+    @media (min-width: 770px) and (max-width: 950px) {
+      padding: 5px 2px;
+    }
+
+    @media (min-width: 480px) and (max-width: 600px) {
+      padding: 5px 2px;
+    }
   }
 
   &__numero {
