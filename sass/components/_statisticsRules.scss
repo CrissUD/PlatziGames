@@ -8,6 +8,14 @@
     align-items: center;
     @include box;
 
+    @media (max-width: 1024px) {
+        width: 70%;
+    }
+
+    @media (max-width: 480px) {
+        width: 85%;
+    }
+
     .estadistica_elemento:hover {
         cursor: pointer;
         text-shadow: 0px 0px 8px $color-terciario;

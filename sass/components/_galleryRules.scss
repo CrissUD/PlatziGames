@@ -2,20 +2,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 72%;
     height: 250px;
     margin: 10px auto;
     padding: 10px 15px;
     justify-content: space-evenly;
     @include box;
 
+    @media (max-width: 1024px) {
+        height: auto;
+    }
+
+    @media (max-width: 480px) {
+        width: 85%;
+    }
+
+    &__fotos {
+        text-align: center;
+    }
+
     &__foto-principal {
         float: left;
+        margin-top: 10px;
         margin-right: 10px;
+        @media (max-width: 1024px) {
+            float: none;
+        }
     }
     &__fotos-adicionales {
         height: 70px;
         margin: 5px;
+        @media (max-width: 1024px) {
+            height: auto;
+        }
     }
     h2 {
         margin-bottom: 10px;

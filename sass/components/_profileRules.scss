@@ -4,6 +4,11 @@
     color: $color-claro;
     background: $color-secundario;
 
+    @media (max-width: 767px) {
+        margin: auto;
+        width: 100%;
+    }
+
     &__avatar {
         display: block;
         margin: 0 auto;

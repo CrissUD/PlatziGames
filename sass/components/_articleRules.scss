@@ -2,6 +2,10 @@
     background: $color-primario;
     width: 50%;
     padding: 80px 40px;
+
+    @media (max-width: 767px) {
+        width: 95%;
+    }
 }
 
 .articulo {
@@ -23,5 +27,12 @@
         margin-bottom: 30px;
         padding-right: 100px;
         color: get-opacity($color-claro, .7);
+
+        @media (max-width: 1020px) {
+            padding-right: 50px;
+        }
+        @media (max-width: 420px) {
+            padding-right: 20px;
+        }
     }
 }
