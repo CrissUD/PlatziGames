@@ -27,6 +27,11 @@ body {
   background-size: cover;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .buscador {
+    padding: 100px 30px;
+  }
+}
 .buscador__input {
   width: 75%;
   height: 60px;
@@ -34,6 +39,11 @@ body {
   border: none;
   border-radius: 25px;
   font-size: 25px;
+}
+@media (max-width: 650px) {
+  .buscador__input {
+    width: 100%;
+  }
 }
 .encabezado--con-filtros {
   display: flex;
@@ -47,17 +57,34 @@ body {
   font-family: 'oswald', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  line-height: 55px;
+}
+@media (max-width: 460px) {
+  .encabezado--con-filtros h2 {
+    text-align: center;
+  }
 }
 .encabezado--con-filtros .filtros {
   width: 250px;
   height: 75px;
   padding: 20px;
+  text-align: center;
   box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.6);
+}
+@media (max-width: 550px) {
+  .encabezado--con-filtros .filtros {
+    display: none;
+  }
 }
 .encabezado--con-filtros .filtros span {
   font-family: 'oswald', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+}
+@media (max-width: 950px) {
+  .encabezado--con-filtros .filtros span {
+    display: block;
+  }
 }
 .encabezado--con-filtros .filtros a {
   margin-left: 20px;

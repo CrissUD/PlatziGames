@@ -24,8 +24,8 @@ h3 {
   font-weight: bold;
 }
 .intro {
-  margin: auto;
-  max-width: 1340px;
+  margin: 30px auto;
+  width: 90%;
   height: 650px;
   padding: 0.7rem;
   position: relative;
@@ -33,13 +33,23 @@ h3 {
   box-shadow: 0px 5px 15px 0px rgba(136, 65, 218, 0.8);
 }
 .intro__imagen {
-  max-width: 1320px;
+  width: 98%;
   position: absolute;
 }
 .intro__imagen img {
   width: 100%;
   height: 624px;
   object-fit: cover;
+}
+@media (max-width: 770px) {
+  .intro__imagen {
+    width: 97%;
+  }
+}
+@media (max-width: 430px) {
+  .intro__imagen {
+    width: 94%;
+  }
 }
 .intro__contenido {
   width: 50%;
@@ -61,11 +71,17 @@ h3 {
   font-size: 50px;
   line-height: 60px;
 }
+@media (max-width: 700px) {
+  .intro__titulo {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
 .intro__autor {
   width: 150px;
   margin: 0 auto;
   position: absolute;
-  top: 400px;
+  top: 450px;
   left: 0;
   right: 0;
   color: #fff;
@@ -87,6 +103,11 @@ h3 {
   max-width: 660px;
   margin: 0 auto;
 }
+@media (max-width: 660px) {
+  .articulo--principal {
+    width: 90%;
+  }
+}
 .articulo--principal__intro {
   font-size: 26px;
   line-height: 36px;
@@ -102,6 +123,7 @@ h3 {
 }
 .contenedor--cajas {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   max-width: 1400px;
   margin: 0 auto;
@@ -111,6 +133,11 @@ h3 {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 5px 15px 0px rgba(136, 65, 218, 0.8);
+}
+@media (max-width: 430px) {
+  .caja {
+    width: 300px;
+  }
 }
 .caja__contenido {
   padding: 25px;
