@@ -1,5 +1,6 @@
 .contenedor--cajas {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly ;
     max-width: 1400px;
     margin: 0 auto;
@@ -10,6 +11,10 @@
     border-radius: 20px;
     overflow: hidden;
     .shadow (@color-secundario);
+
+    @media (max-width: 430px) {
+        width: 300px;
+    }
 
     &__contenido {
         padding: 25px;

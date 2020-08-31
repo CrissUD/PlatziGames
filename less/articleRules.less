@@ -1,6 +1,11 @@
 .articulo--principal {
     max-width: 660px;
     margin: 0 auto;
+
+    @media (max-width: 660px) {
+        width: 90%;
+    }
+
     &__intro {
         .dynamic-font (@font-base + 8%);
     }

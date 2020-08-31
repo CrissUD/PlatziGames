@@ -1,6 +1,6 @@
 .intro {
-    margin: auto;
-    max-width: 1340px;
+    margin: 30px auto;
+    width: 90%;
     height: 650px;
     padding: .7rem;
     position: relative;
@@ -8,12 +8,19 @@
     .shadow(@color-secundario);
 
     &__imagen {
-        max-width: 1320px;
+        width: 98%;
         position: absolute;
         img {
             width: 100%;
             height: 624px;
             object-fit: cover;
+        }
+
+        @media (max-width: 770px) {
+            width: 97%;
+        }
+        @media (max-width: 430px) {
+            width: 94%;
         }
     }
     &__contenido {
@@ -32,12 +39,15 @@
     }
     &__titulo{
         .dynamic-font (50px);
+        @media (max-width: 700px) {
+            .dynamic-font (35px);
+        }
     }
     &__autor{
         width: 150px;
         margin: 0 auto;
         position: absolute;
-        top: 400px;
+        top: 450px;
         left: 0;
         right: 0;
         color: @color-claro;
